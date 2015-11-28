@@ -8,7 +8,7 @@
 Summary:	A python client implementation of the STOMP protocol
 Name:		python-stomper
 Version:	0.2.9
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Development/Languages
 # Latest releases didn't appear on pypi.

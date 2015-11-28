@@ -38,7 +38,7 @@ fashion.
 mv stomper-%{commit}*/* .
 
 %build
-%{__python} setup.py build
+%py_build
 
 %if %{with tests}
 PYTHONPATH=. nosetests-%{py_ver} -q
@@ -46,11 +46,7 @@ PYTHONPATH=. nosetests-%{py_ver} -q
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py \
-	build install \
-	--skip-build \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 %{__rm} -r $RPM_BUILD_ROOT%{py_sitescriptdir}/stomper/tests
 
